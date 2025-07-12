@@ -1,3 +1,6 @@
+"use client";
+
+import { login } from "@/lib/auth";
 import Image from "next/image";
 
 export default function SignInPage() {
@@ -14,7 +17,10 @@ export default function SignInPage() {
         </div>
 
         <div className="mt-8">
-          <button className="w-full flex items-center justify-center gap-3 px-4 py-3 border border-gray-300 rounded-lg text-gray-700 bg-white hover:bg-gray-50 transition-colors duration-200">
+          <button
+            onClick={login}
+            className="w-full flex items-center justify-center gap-3 px-4 py-3 border border-gray-300 rounded-lg text-gray-700 bg-white hover:bg-gray-50 transition-colors duration-200"
+          >
             <Image
               src={"/github-mark.svg"}
               alt="github-logo"
